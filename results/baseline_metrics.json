@@ -1,0 +1,28 @@
+{
+  "experiment": "Baseline Results (Reproduced Model - Assignment 2)",
+  "model": {
+    "backbone": "ViT-B-16-SigLIP-384",
+    "freeze_backbone": true
+  },
+  "training_setup": {
+    "train_dataset": "CiFake",
+    "train_samples": 10000,
+    "constraint": "Google Colab T4"
+  },
+  "evaluation": {
+    "cifake_10k": {
+      "accuracy": 0.9193,
+      "auc": 0.9721,
+      "f1": 0.9196,
+      "average_precision": 0.9712
+    },
+    "hidf": {
+      "accuracy": 0.7960,
+      "f1": 0.7920
+    },
+    "sid_binary": {
+      "accuracy": 0.8594,
+      "f1": 0.8645
+    }
+  }
+}

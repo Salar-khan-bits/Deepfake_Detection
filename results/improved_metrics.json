@@ -1,0 +1,26 @@
+{
+  "experiment": "Improved Version (Assignment 3)",
+  "model": {
+    "backbone": "ViT-B-16-SigLIP-384",
+    "freeze_backbone": true
+  },
+  "training_setup": {
+    "train_dataset": "CiFake",
+    "train_samples": 140000,
+    "main_change": "Scaled CiFake training data from 10K to 140K while keeping the same smaller backbone."
+  },
+  "evaluation": {
+    "cifake_140k": {
+      "accuracy": 0.9440,
+      "auc": 0.9896,
+      "f1": 0.9447,
+      "average_precision": 0.9899
+    }
+  },
+  "improvement_vs_baseline_10k": {
+    "accuracy_delta": 0.0247
+  },
+  "notes": {
+    "comparison_to_paper": "Larger data volume moved performance closer to the original paper result (>95% accuracy with a larger ViT-L backbone)."
+  }
+}
